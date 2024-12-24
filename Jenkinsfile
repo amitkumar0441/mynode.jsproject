@@ -13,11 +13,5 @@ pipeline {
                 
             }
         }
-        stage('stage3- run the node application in background') {
-            steps {
-                sh 'nohup npm start &> npm.log &'
-                
-            }
-        }
     }
 }
