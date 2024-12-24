@@ -13,5 +13,11 @@ pipeline {
                 
             }
         }
+        stage('stage3- run the application') {
+            steps {
+                sh 'nohup npm start &'
+                
+            }
+        }
     }
 }
