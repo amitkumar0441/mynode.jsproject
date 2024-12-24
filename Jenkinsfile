@@ -13,13 +13,7 @@ pipeline {
                 
             }
         }
-        stage('stage3- install node modules') {
-            steps {
-                sh 'npm install'
-                
-            }
-        }
-        stage('stage4- run the node application in background') {
+        stage('stage3- run the node application in background') {
             steps {
                 sh 'nohup npm start &> npm.log &'
                 
