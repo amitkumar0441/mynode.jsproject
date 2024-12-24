@@ -15,7 +15,10 @@ pipeline {
         }
         stage('stage3- run the application') {
             steps {
-                sh 'nohup npm start &'
+                sh '''
+                nohup npm start > output.log 2>&1 &
+                echo "Node.js app started in background"
+                '''
                 
             }
         }
